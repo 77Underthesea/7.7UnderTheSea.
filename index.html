@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>7.7 Under The Sea</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, #00c6ff, #004e92);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.3);
+      backdrop-filter: blur(8px);
+      padding: 15px 30px;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h2 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* HEADER */
+    header {
+      padding: 120px 20px 40px;
+      text-align: center;
+      animation: fadeDown 1.5s ease;
+    }
+
+    header h1 {
+      font-size: 3.5em;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      opacity: 0.9;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 25px;
+      font-size: 2em;
+    }
+
+    /* DESKRIPSI KELAS */
+    .deskripsi-container {
+      max-width: 800px;
+      margin: 0 auto 40px;
+      line-height: 1.8;
+      text-align: justify;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .deskripsi-container p {
+      margin-bottom: 15px;
+    }
+
+    /* FOTO KELAS */
+    .foto-kelas img {
+      width: 90%;
+      max-width: 650px;
+      border-radius: 25px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+      animation: float 4s ease-in-out infinite;
+    }
+
+    /* GURU */
+    .guru img {
+      width: 220px;
+      border-radius: 25px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    /* GALERI */
+    .galeri {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .galeri img {
+      width: 100%;
+      border-radius: 18px;
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+
+    .galeri img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+
+    /* IKAN ANIMASI */
+    .fish {
+      position: absolute;
+      top: 60%;
+      left: -150px;
+      font-size: 50px;
+      animation: swim 18s linear infinite;
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    .fish.two {
+      top: 75%;
+      animation-duration: 25s;
+      font-size: 35px;
+    }
+
+    @keyframes swim {
+      from { transform: translateX(-200px); }
+      to { transform: translateX(120vw); }
+    }
+
+    /* MUSIK */
+    .musik {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: white;
+      color: #004e92;
+      border: none;
+      padding: 15px;
+      border-radius: 50%;
+      font-size: 22px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+      z-index: 99;
+    }
+
+    /* FOOTER */
+    footer {
+      background: rgba(0,0,0,0.4);
+      padding: 25px;
+      text-align: center;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    /* ANIMASI UMUM */
+    @keyframes fadeDown {
+      from {opacity: 0; transform: translateY(-40px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes float {
+      0%,100% {transform: translateY(0);}
+      50% {transform: translateY(-18px);}
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="fish">推</div>
+  <div class="fish two">🐟</div>
+
+  <nav>
+    <h2>🌊 7.7</h2>
+    <div>
+      <a href="#tentang">Tentang</a>
+      <a href="#kelas">Kelas</a>
+      <a href="#guru">Guru</a>
+      <a href="#galeri">Galeri</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>7.7 Under The Sea</h1>
+    <p>Website Resmi Kelas 7.7 🌊🐬</p>
+  </header>
+
+  <section id="tentang">
+    <div class="deskripsi-container">
+      <h2 style="text-align: center;">📖 Profil Kelas</h2>
+      <p>
+        <strong>Kelas VII 7</strong> adalah salah satu kelas di <strong>SMP Negeri 1 Tanjungpinang</strong> yang terdiri dari hampir 35 siswa, dengan 15 siswa laki-laki dan 20 siswa perempuan. Kelas ini dikenal sebagai kelas yang kompak, aktif, dan memiliki semangat belajar yang tinggi.
+      </p>
+      <p>
+        Dalam kegiatan belajar, siswa-siswi kelas VII 7 selalu berusaha disiplin dan saling bekerja sama. Mereka juga aktif mengikuti berbagai kegiatan sekolah, baik akademik maupun nonakademik, seperti lomba, organisasi, dan kegiatan sosial.
+      </p>
+      <p>
+        Kelas ini dibimbing oleh wali kelas <strong>Ibu Yurisnawati, S.Pd</strong>, yang selalu memberikan motivasi dan arahan agar siswa-siswinya berkembang menjadi pribadi yang bertanggung jawab, berprestasi, dan berakhlak baik.
+      </p>
+      <p>
+        Dengan kebersamaan dan kerja sama yang kuat, kelas VII 7 berkomitmen untuk terus meraih prestasi dan menjaga suasana kelas yang nyaman, tertib, dan menyenangkan.
+      </p>
+    </div>
+  </section>
+
+  <section id="kelas" class="foto-kelas">
+    <h2>📷 Foto Kelas</h2>
+    <img src="kelas.jpg" alt="Foto Kelas 7.7">
+  </section>
+
+  <section id="guru" class="guru">
+    <h2>👩‍🏫 Wali Kelas</h2>
+    <img src="guru.jpg" alt="Guru Kelas">
+    <p>Yurisnawati S.Pd✨</p>
+  </section>
+
+  <section id="galeri">
+    <h2>📸 Kegiatan Kelas</h2>
+    <div class="galeri">
+      <img src="kegiatan1.jpg">
+      <img src="kegiatan2.jpg">
+      <img src="kegiatan3.jpg">
+    </div>
+  </section>
+
+  <audio id="musik" src="musik.mp3" loop></audio>
+  <button class="musik" onclick="toggleMusic()">🎵</button>
+
+  <footer>
+    © 2026 Kelas 7.7 – Under The Sea | Dibuat dengan 💙
+  </footer>
+
+  <script>
+    const musik = document.getElementById("musik");
+    let play = false;
+
+    function toggleMusic() {
+      if (!play) {
+        musik.play().catch(e => console.log("Musik butuh interaksi user"));
+        play = true;
+      } else {
+        musik.pause();
+        play = false;
+      }
+    }
+  </script>
+
+</body>
+</html>
